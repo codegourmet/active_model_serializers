@@ -144,8 +144,11 @@ end
       @key_format    = options[:key_format]
       @context       = options[:context]
       @namespace     = options[:namespace]
+
+      @options = options
     end
     attr_accessor :object, :scope, :root, :meta_key, :meta, :key_format, :context, :polymorphic
+    attr_accessor :options
 
     def json_key
       key = if root == true || root.nil?
